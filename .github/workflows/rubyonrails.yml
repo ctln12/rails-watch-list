@@ -37,9 +37,9 @@ jobs:
           RAILS_ENV: test
         run: |
           cp config/database.github.yml config/database.yml
-          bin/rails db:prepare
+          bundle exec rails db:prepare
       - name: Run tests
-        run: bin/rake
+        run: bundle exec rails test
 
   lint:
     runs-on: ubuntu-latest
