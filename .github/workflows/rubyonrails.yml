@@ -37,7 +37,7 @@ jobs:
           RAILS_ENV: test
         run: |
           cp config/database.github.yml config/database.yml
-          bin/rails db:schema:load
+          bin/rails db:prepare
       - name: Run tests
         run: bin/rake
 
