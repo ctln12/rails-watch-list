@@ -55,9 +55,12 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
-  #Security tools
+  # Patch-level verification for bundler [https://github.com/rubysec/bundler-audit]
   gem 'bundler-audit'
+  # Checks for Ruby and gems known security vulnerabilities [https://github.com/civisanalytics/ruby_audit]
   gem 'ruby_audit'
+  # Checks for security vulnerabilities [https://github.com/presidentbeef/brakeman]
+  gem 'brakeman'
 end
 
 group :development do
