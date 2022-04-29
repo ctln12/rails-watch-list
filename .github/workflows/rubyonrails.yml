@@ -33,7 +33,9 @@ jobs:
         with:
           bundler-cache: true
       - name: Set up database schema
-        run: bin/rails db:schema:load
+        run: |
+          cp config/database.github.yml config/database.yml
+          bin/rails db:schema:load
       - name: Run tests
         run: bin/rake
 
