@@ -2,9 +2,9 @@
 
 FactoryBot.define do
   factory :movie do
-    title { 'MyString' }
-    overview { 'MyText' }
-    poster_url { 'MyString' }
-    rating { 1.5 }
+    title { Faker::Movie.title }
+    overview { Faker::Movie.quote }
+    poster_url { 'https://www.seoclerk.com/pics/569323-1bpEHf1510684912.jpg' }
+    rating { 5.0 }
   end
 end
