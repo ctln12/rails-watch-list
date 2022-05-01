@@ -79,6 +79,8 @@ group :development, :test do
   gem 'capybara'
   # Generates fake data
   gem 'faker'
+  # Provides one-liners to test common Rails functionality [https://github.com/thoughtbot/shoulda-matchers]
+  gem 'shoulda-matchers'
 end
 
 group :development do
