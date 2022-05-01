@@ -68,6 +68,17 @@ group :development, :test do
   gem 'rubocop', require: false
   # Enforces Rails best practices and coding conventions [https://github.com/rubocop/rubocop-rails]
   gem 'rubocop-rails', require: false
+  # Analyses specs [https://github.com/rubocop/rubocop-rspec]
+  gem 'rubocop-rspec', require: false
+
+  # Testing framework [https://github.com/rspec/rspec-rails]
+  gem 'rspec-rails'
+  # Creates fixtures [https://github.com/thoughtbot/factory_bot_rails]
+  gem 'factory_bot_rails'
+  # Simulates a real user interaction to test web applications [https://github.com/teamcapybara/capybara]
+  gem 'capybara'
+  # Generates fake data
+  gem 'faker'
 end
 
 group :development do

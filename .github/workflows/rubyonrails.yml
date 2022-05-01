@@ -38,8 +38,8 @@ jobs:
         run: |
           cp config/database.github.yml config/database.yml
           bundle exec rails db:prepare
-      - name: Run tests
-        run: bundle exec rails test
+      - name: Run specs
+        run: bundle exec rspec
 
   lint:
     runs-on: ubuntu-latest
