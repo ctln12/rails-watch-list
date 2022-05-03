@@ -37,8 +37,6 @@ jobs:
           RAILS_ENV: test
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: |
-          echo 'TMDB_API_KEY=$TMDB_API_KEY' >> .env
-          cat .env
           cp config/database.github.yml config/database.yml
           bundle exec rails db:prepare
       - name: Run specs
