@@ -11,8 +11,6 @@ base_url = 'https://api.themoviedb.org/'
 img_base_url = 'https://image.tmdb.org/t/p/'
 img_size = 'w500' # original
 
-p ENV.fetch('TMDB_API_KEY')
-
 connection = Faraday.new(
   url: base_url,
   params: { api_key: ENV.fetch('TMDB_API_KEY') },
