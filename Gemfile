@@ -84,6 +84,9 @@ group :development, :test do
   gem 'faker'
   # Provides one-liners to test common Rails functionality [https://github.com/thoughtbot/shoulda-matchers]
   gem 'shoulda-matchers'
+
+  # Shim to load environment variables from .env into ENV [https://github.com/bkeepers/dotenv]
+  gem 'dotenv-rails'
 end
 
 group :development do
