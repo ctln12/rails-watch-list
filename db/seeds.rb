@@ -25,7 +25,7 @@ Movie.destroy_all
 response = connection.get('/3/movie/top_rated')
 data = JSON.parse(response.body)
 
-p movies = data['results']
+movies = data['results']
 
 puts "Creating #{movies.count} movies..."
 movies.each do |movie|
