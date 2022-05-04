@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :list do
-    name { 'MyString' }
+    name { Faker::Book.genre }
   end
 end
