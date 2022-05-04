@@ -19,6 +19,7 @@ connection = Faraday.new(
 
 puts 'Cleaning database...'
 Movie.destroy_all
+List.destroy_all
 
 response = connection.get('/3/movie/top_rated')
 data = JSON.parse(response.body)
@@ -35,5 +36,11 @@ movies.each do |movie|
   )
 end
 puts "  Created #{Movie.count} movies"
+
+list_names = ['Classics', 'Thriller', 'Western', 'Science fiction', 'Comedy']
+
+puts "Creating #{list_names.count} lists..."
+list_names.each { |list_name| List.create!(name: list_name) }
+puts "  Created #{List.count} lists"
 
 puts 'Finished!'
