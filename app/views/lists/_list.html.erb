@@ -1,3 +1,7 @@
-<div class="relative mt-4 h-56 rounded bg-cover bg-center font-semibold sm:mt-0 xl:h-60" style="background-image: url('https://images.unsplash.com/photo-1572188863110-46d457c9234d')">
-  <span class="absolute left-3 bottom-2 text-lg sm:text-xl"><%= list.name %></span>
-</div>
+<%= link_to "#" do %>
+  <div class="mt-4 h-56 rounded bg-cover bg-center font-semibold transform transition duration-500 hover:scale-105 sm:mt-0 xl:h-60" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url('<%= cl_image_path list.image.key, height: 300, crop: :fill %>')">
+    <span class="h-full w-full flex items-center justify-center text-white text-lg transform transition duration-500 hover:scale-125 sm:text-xl">
+      <%= list.name %>
+    </span>
+  </div>
+<% end %>
