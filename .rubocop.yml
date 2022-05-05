@@ -4,5 +4,6 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'db/schema.rb'
+    - vendor/**/*.rb
 Style/Documentation:
   Enabled: false
