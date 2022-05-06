@@ -89,6 +89,10 @@ group :development, :test do
   gem 'faker'
   # Provides one-liners to test common Rails functionality [https://github.com/thoughtbot/shoulda-matchers]
   gem 'shoulda-matchers'
+  # Mimics the behaviour of a real user interaction [https://rubygems.org/gems/selenium-webdriver/versions/4.1.0]
+  gem 'selenium-webdriver'
+  # Run Selenium tests more easily [https://github.com/titusfortner/webdrivers]
+  gem 'webdrivers'
 
   # Shim to load environment variables from .env into ENV [https://github.com/bkeepers/dotenv]
   gem 'dotenv-rails'
