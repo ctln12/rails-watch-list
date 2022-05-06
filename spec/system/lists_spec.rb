@@ -27,4 +27,19 @@ RSpec.describe 'Lists', type: :system do
 
     assert_selector 'h1', text: list.name
   end
+
+  it 'creating a new list successfully' do
+    list = build(:list)
+
+    visit root_path
+    click_link 'Create List'
+    expect(page).to have_current_path(new_list_path)
+
+    fill_in 'Name', with: list.name
+    attach_file('Image', Rails.root.join('spec/files/image.jpg'))
+    click_button 'Create List'
+
+    expect(page).to have_current_path(list_path(List.last))
+    assert_selector 'h1', text: list.name
+  end
 end
