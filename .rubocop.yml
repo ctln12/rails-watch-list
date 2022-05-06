@@ -1,14 +1,14 @@
-inherit_from: .rubocop_todo.yml
+require:
+  - rubocop-discourse
 
-inherit_gem:
-  rubocop-discourse: default.yml
+inherit_from: .rubocop_todo.yml
 
 AllCops:
   NewCops: enable
   Exclude:
     - 'db/schema.rb'
-    - vendor/**/*.rb
+    - 'vendor/**/*'
 Style/Documentation:
   Enabled: false
-Security/CompoundHash: # new in 1.28
+Discourse:
   Enabled: true
