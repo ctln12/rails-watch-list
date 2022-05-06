@@ -12,4 +12,14 @@ RSpec.describe 'ListsController', type: :request do
       expect(response.body).to include list.name
     end
   end
+
+  describe 'GET /lists/:id' do
+    let!(:list) { create :list }
+
+    it 'shows the details of a list' do
+      get list_url(list)
+      expect(response).to have_http_status(:ok)
+      expect(response.body).to include list.name
+    end
+  end
 end
