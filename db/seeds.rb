@@ -41,11 +41,26 @@ end
 puts "  Created #{Movie.count} movies"
 
 list_details = [
-  { name: 'Classics', image_url: 'https://cdn.cnn.com/cnnnext/dam/assets/190701104249-classic-movies-image-1-exlarge-169.jpg' },
-  { name: 'Thriller', image_url: 'https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/04/Hollywood-Suspense-thriller-movies.png?fit=753%2C459&ssl=1' },
-  { name: 'Western', image_url: 'https://wallpapercave.com/wp/wp8804893.jpg' },
-  { name: 'Science fiction', image_url: 'https://digitalsushma.com/wp-content/uploads/2021/02/Classic-Science-Fiction-Movies-You-Must-Watch.jpg' },
-  { name: 'Comedy', image_url: 'https://wallpaperaccess.com/full/3726109.jpg' }
+  {
+    name: 'Classics',
+    image_url: 'https://cdn.cnn.com/cnnnext/dam/assets/190701104249-classic-movies-image-1-exlarge-169.jpg'
+  },
+  {
+    name: 'Thriller',
+    image_url: 'https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/04/Hollywood-Suspense-thriller-movies.png?fit=753%2C459&ssl=1'
+  },
+  {
+    name: 'Western',
+    image_url: 'https://wallpapercave.com/wp/wp8804893.jpg'
+  },
+  {
+    name: 'Science fiction',
+    image_url: 'https://digitalsushma.com/wp-content/uploads/2021/02/Classic-Science-Fiction-Movies-You-Must-Watch.jpg'
+  },
+  {
+    name: 'Comedy',
+    image_url: 'https://wallpaperaccess.com/full/3726109.jpg'
+  }
 ]
 
 puts "Creating #{list_details.count} lists..."

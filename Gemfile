@@ -77,7 +77,7 @@ group :development, :test do
   # Analyses specs [https://github.com/rubocop/rubocop-rspec]
   gem 'rubocop-rspec', require: false
   # Custom rubocop cops used by Discourse [https://github.com/discourse/rubocop-discourse]
-  gem "rubocop-discourse"
+  gem 'rubocop-discourse'
 
   # Testing framework [https://github.com/rspec/rspec-rails]
   gem 'rspec-rails'
