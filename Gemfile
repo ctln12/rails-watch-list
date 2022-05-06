@@ -56,6 +56,9 @@ gem 'bootsnap', require: false
 # HTTP/REST API client library [https://lostisland.github.io/faraday/]
 gem 'faraday'
 
+# Optimize, transform, upload and manage cloud's assets [https://github.com/cloudinary/cloudinary_gem]
+gem 'cloudinary'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -73,6 +76,8 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   # Analyses specs [https://github.com/rubocop/rubocop-rspec]
   gem 'rubocop-rspec', require: false
+  # Custom rubocop cops used by Discourse [https://github.com/discourse/rubocop-discourse]
+  gem 'rubocop-discourse'
 
   # Testing framework [https://github.com/rspec/rspec-rails]
   gem 'rspec-rails'

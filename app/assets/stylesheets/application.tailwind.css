@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .h-banner {
+    height: calc(100vh - 68px);
+  }
+}
+
 /*
 
 @layer components {

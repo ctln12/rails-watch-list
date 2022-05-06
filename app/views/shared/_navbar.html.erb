@@ -1,0 +1,11 @@
+<nav>
+  <div class="px-4 py-3 font-medium flex items-center justify-between sm:px-8 sm:py-5">
+    <div class="text-lg lg:text-xl">
+      <%= link_to "WatchList", root_path, class: "font-bold text-red-600 hover:text-red-700" %>
+    </div>
+    <div class="space-x-4 sm:space-x-8">
+      <%= link_to "All lists", root_path(anchor: "lists"), class: "pb-1 text-gray-900 hover:border-b-2 hover:border-red-600" %>
+      <%= link_to "New list", "#", class: "pb-1 text-gray-900 hover:border-b-2 hover:border-red-600" %>
+    </div>
+  </div>
+</nav>
