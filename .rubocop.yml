@@ -10,3 +10,5 @@ AllCops:
     - vendor/**/*.rb
 Style/Documentation:
   Enabled: false
+Security/CompoundHash: # new in 1.28
+  Enabled: true
