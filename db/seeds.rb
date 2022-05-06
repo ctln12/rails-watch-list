@@ -67,7 +67,7 @@ puts "Creating #{list_details.count} lists..."
 list_details.each do |detail|
   list = List.new(name: detail[:name])
   file = URI.parse(detail[:image_url]).open
-  list.image.attach(io: file, filename: "#{detail[:name]}.jpg", content_type: 'image/jpg')
+  list.image.attach(io: file, filename: "#{detail[:name]}.jpg", content_type: 'image/jpeg')
   list.save!
 end
 puts "  Created #{List.count} lists"
