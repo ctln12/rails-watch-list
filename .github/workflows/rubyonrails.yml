@@ -45,7 +45,9 @@ jobs:
           cp config/database.github.yml config/database.yml
           bundle exec rails db:prepare
       - name: Run specs
-        run: bundle exec rspec
+        run: |
+          bundle exec rails assets:precompile
+          bundle exec rspec
 
   lint:
     runs-on: ubuntu-latest
