@@ -24,7 +24,6 @@ RSpec.describe 'Create list', type: :system do
 
   scenario 'with invalid name and image' do
     list = create(:list)
-    list_nb = List.count
 
     visit root_path
     click_link 'Create List'
@@ -35,6 +34,5 @@ RSpec.describe 'Create list', type: :system do
 
     expect(page).to have_content('Name has already been taken')
     expect(page).to have_content("Image can't be blank")
-    expect(List.count).to eq(list_nb)
   end
 end
