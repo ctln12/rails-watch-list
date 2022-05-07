@@ -59,6 +59,12 @@ gem 'faraday'
 # Optimize, transform, upload and manage cloud's assets [https://github.com/cloudinary/cloudinary_gem]
 gem 'cloudinary'
 
+# Rails forms made easy [https://github.com/heartcombo/simple_form]
+gem 'simple_form'
+
+# Adds a base simple_form config with TailwindCSS [https://github.com/tarellel/simple_form-tailwind]
+gem 'simple_form-tailwind'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
