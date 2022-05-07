@@ -16,3 +16,5 @@ Discourse:
   Enabled: true
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
+Discourse/NoAddReferenceOrAliasesActiveRecordMigration:
+  Enabled: false

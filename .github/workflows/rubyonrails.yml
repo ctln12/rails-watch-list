@@ -43,7 +43,7 @@ jobs:
           RAILS_ENV: test
         run: |
           cp config/database.github.yml config/database.yml
-          bundle exec rails db:prepare
+          bundle exec rails db:create db:migrate
       - name: Run specs
         run: |
           bundle exec rails assets:precompile

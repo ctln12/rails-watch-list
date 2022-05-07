@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Movie < ApplicationRecord
+  has_many :bookmarks
+  has_many :lists, through: :bookmarks
+
   validates_presence_of :title
   validates_presence_of :overview
   validates_uniqueness_of :title
