@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :bookmark do
-    comment { 'MyString' }
-    movie { nil }
-    list { nil }
+    comment { Faker::Lorem.paragraph }
+    association :movie
+    association :list
   end
 end
