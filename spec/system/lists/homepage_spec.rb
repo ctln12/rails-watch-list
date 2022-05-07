@@ -7,14 +7,15 @@ RSpec.describe 'View homepage', type: :system do
     driven_by(:rack_test)
   end
 
-  scenario 'with all lists' do
-    list = create(:list)
+  let!(:lists) { [create(:list), create(:list)] }
 
+  scenario 'with all lists' do
     visit root_path
 
     click_link 'View Lists'
 
     assert_selector 'h2', text: 'Lists'
-    assert_selector 'span', text: list.name
+    assert_selector 'span', text: lists[0].name
+    assert_selector 'span', text: lists[1].name
   end
 end
