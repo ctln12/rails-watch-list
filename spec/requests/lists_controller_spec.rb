@@ -51,7 +51,7 @@ RSpec.describe 'ListsController', type: :request do
     context 'with invalid parameters' do
       it 'does not create a new list' do
         expect { post lists_url, params: { list: invalid_attributes } }.to change(List, :count).by(0)
-        expect(response).to have_http_status(:ok)
+        expect(response).to have_http_status(:unprocessable_entity)
         expect(response.body).to include 'Add a new list'
       end
     end

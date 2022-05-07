@@ -33,7 +33,7 @@ RSpec.describe 'Create list', type: :system do
     fill_in 'Name', with: list.name
     click_button 'Create List'
 
-    expect(page).to have_content('Title has already been taken')
+    expect(page).to have_content('Name has already been taken')
     expect(page).to have_content("Image can't be blank")
     expect(List.count).to eq(list_nb)
   end

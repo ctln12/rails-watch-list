@@ -1,9 +1,19 @@
-<h1>Add a new list</h1>
+<div class="container mx-auto my-14 px-5 max-w-md">
+  <h1 class="mb-8 text-3xl">Add a new list</h1>
 
-<%= form_with model: @list do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :image %>
-  <%= form.file_field :image %>
-  <%= form.submit %>
-<% end %>
+  <%= simple_form_for @list do |f| %>
+    <% name_border = @list.errors[:name].empty? ? "border-gray-300" : "border-red-500" %>
+    <%= f.input :name,autofocus: true,
+                wrapper_html: { class: "mb-6" },
+                label_html: { class: "block mb-1 text-sm font-medium text-gray-700"},
+                input_html: { class: "w-full #{name_border} rounded sm:text-sm"},
+                full_error_html: { class: "text-sm text-red-500" } %>
+    <% image_border = @list.errors[:image].empty? ? "" : "border border-red-500 rounded" %>
+    <%= f.input :image, as: :file,
+                wrapper_html: { class: "mb-6" },
+                label_html: { class: "block mb-1 text-sm font-medium text-gray-700"},
+                input_html: { class: "w-full #{image_border} text-gray-600 text-sm font-light file:mr-2 file:py-2 file:px-4 file:font-normal file:rounded file:border-0 file:bg-amber-100 file:text-amber-600 file:hover:bg-amber-200"},
+                full_error_html: { class: "block text-sm text-red-500" } %>
+    <%= f.button :submit, class: "my-3 py-2 px-4 text-sm text-white font-medium rounded bg-red-600 hover:bg-red-700" %>
+  <% end %>
+</div>
