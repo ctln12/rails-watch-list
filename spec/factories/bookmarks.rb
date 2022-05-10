@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :bookmark do
     comment { Faker::Lorem.paragraph }
-    association :movie
-    association :list
+    association :movie, factory: :movie
+    association :list, factory: :list
   end
 end
