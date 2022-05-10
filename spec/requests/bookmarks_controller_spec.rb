@@ -3,9 +3,12 @@
 require 'rails_helper'
 
 RSpec.describe 'BookmarksController', type: :request do
-  describe 'GET /lists/:list_id/bookmarks/new' do
-    let!(:list) { create :list }
+  let(:list) { create :list }
+  let(:movie) { create :movie }
+  let(:valid_attributes) { attributes_for(:bookmark, movie_id: movie.id) }
+  let(:invalid_attributes) { attributes_for(:bookmark) }
 
+  describe 'GET /lists/:list_id/bookmarks/new' do
     it 'shows the page to create a new bookmark' do
       get new_list_bookmark_url(list)
 
@@ -15,11 +18,6 @@ RSpec.describe 'BookmarksController', type: :request do
   end
 
   describe 'POST /lists/:list_id/bookmarks', type: :request do
-    let!(:list) { create :list }
-    let!(:movie) { create :movie }
-    let!(:valid_attributes) { attributes_for(:bookmark, movie_id: movie.id) }
-    let!(:invalid_attributes) { attributes_for(:bookmark) }
-
     context 'with valid parameters' do
       it 'creates a new bookmark successfully' do
         expect { post list_bookmarks_url(list), params: { bookmark: valid_attributes } }

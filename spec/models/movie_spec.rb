@@ -4,15 +4,11 @@ require 'rails_helper'
 
 RSpec.describe Movie, type: :model do
   describe 'associations' do
-    subject!(:movie) { create(:movie) }
-
     it { should have_many :bookmarks }
     it { should have_many(:lists).through(:bookmarks) }
   end
 
   describe 'validations' do
-    subject!(:movie) { create(:movie) }
-
     it { should validate_presence_of :title }
     it { should validate_presence_of :overview }
 
