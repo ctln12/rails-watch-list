@@ -1,7 +1,5 @@
-<h1>Add a movie to your <%= @list.name %> list</h1>
+<div class="container mx-auto my-14 px-5 max-w-md">
+  <h1 class="mb-8 text-3xl">Add a movie to your <%= @list.name %> list</h1>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.button :submit, 'Add Movie' %>
-<% end %>
+  <%= render "bookmarks/form", list: @list, bookmark: @bookmark %>
+</div>

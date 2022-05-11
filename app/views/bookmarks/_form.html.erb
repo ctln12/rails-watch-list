@@ -1,0 +1,15 @@
+<%= simple_form_for [list, bookmark] do |f| %>
+  <% movie_border = bookmark.errors[:movie].empty? ? "border-gray-300" : "border-red-500" %>
+  <%= f.association :movie, autofocus: true,
+                    wrapper_html: { class: "mb-6" },
+                    label_html: { class: "block mb-1 text-sm font-medium text-gray-700"},
+                    input_html: { class: "w-full #{movie_border} rounded sm:text-sm"},
+                    full_error_html: { class: "text-sm text-red-500" } %>
+  <% comment_border = bookmark.errors[:comment].empty? ? "border-gray-300" : "border-red-500" %>
+  <%= f.input :comment,
+              wrapper_html: { class: "mb-6" },
+              label_html: { class: "block mb-1 text-sm font-medium text-gray-700"},
+              input_html: { class: "w-full #{comment_border} rounded sm:text-sm"},
+              full_error_html: { class: "text-sm text-red-500" } %>
+  <%= f.button :submit, 'Add Movie', class: "my-3 py-2 px-4 text-sm text-white font-medium rounded bg-red-600 hover:bg-red-700" %>
+<% end %>
