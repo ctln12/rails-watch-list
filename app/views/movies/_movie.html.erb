@@ -1,0 +1,9 @@
+<div class=" mb-4 sm:mb-0">
+  <%= image_tag movie.poster_url, class: "w-full max-h-64 object-cover rounded-lg" %>
+  <div class="flex justify-between items-baseline">
+    <h2 class="mt-1 sm:mt-2 font-bold text-lg sm:text-xl"><%= movie.title %></h2>
+    <p><%= movie.rating %></p>
+  </div>
+  <p class="text-gray-600 font-light"><%= movie.overview %></p>
+  <%# bookmark comment here %>
+</div>
